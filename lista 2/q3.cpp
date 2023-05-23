@@ -8,17 +8,18 @@ int main(){
     string stopornot = "continue"; 
     string clasS = "continue";
     int students = 0, min = 10, max = 1, gradeSum = 0, media = 0, grade = 0;
-    string input;
+    string input = "void";
     string lastInput = "void";
     while (true){
+        
         if(stopornot == "FIM"){
           break;
         }
         while(true){
+            lastInput = input;
             cin >> input;
             if(input == "FIM"){
                 if(lastInput == "FIM"){
-                  cout << "Im here" << endl;
                   stopornot = "FIM";
                   break;
                 }
@@ -48,15 +49,10 @@ int main(){
                 gradeSum = gradeSum + grade;
 
                 students ++;
-            lastInput = input;
+            
             }   
         }
     }
 
 }
-
-
-
-
-
 
