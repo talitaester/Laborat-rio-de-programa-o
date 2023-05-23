@@ -1,21 +1,26 @@
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
 
 int main(){
-    int XCoord, YCoord, destinationXCoord, destinationYCoord;
-    cin >> destinationXCoord >> destinationYCoord;
-    cin >> XCoord >> YCoord;
-    if (XCoord == destinationXCoord){
-      if (YCoord == destinationYCoord) {
-        cout << "Soltar pacote" << endl;
-      }
-      else{
-        cout << "Nao soltar pacote" << endl;
-      }
+    int height, i, j, t, dif;
+    string pyramid= "#";
+    string space = ">";
+    cin >> height;
+    dif = height -1;
+    
+    for (int i = 0; i < height; i++) {
+        string out = "";
+        for (int j = 0; j < dif; j++) {
+          out += space;
+        }
+        for (int t = 0; t <= i; t++) {
+          out += pyramid;
+        }
+        cout << out << endl;
+        dif --;
     }
-    else{
-      cout << "Nao soltar pacote" << endl;
-    }
+    return 0;
 }
