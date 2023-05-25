@@ -15,7 +15,9 @@ int main(){
             odd += points[i]
         }
     if (even > odd){
-        cout << "VOu ajudar"
+        cout << "Vou ajudar" << endl;
+    } else{
+        cout << "Modo Hard" << endl;
     }
     }
 }
